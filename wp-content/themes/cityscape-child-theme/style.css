@@ -5,13 +5,196 @@ Description:  Real Estate WordPress Theme
 Author:       wowtheme7
 Author URL:   https://wowtheme7.com/
 Template:     cityscape
-Version:      1.0.2
+Version:      1.0.3
 License:      GNU General Public License v2 or later
 License URL:  http://www.gnu.org/licenses/gpl-2.0.html
-Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
 Text Domain:  cityscapechildtheme
 */
 
-/*
-    Please Add your custom styles here
-*/
+/* Best Property Tips — restrained, responsive real-estate styling.
+   Scoped primarily to common WordPress, Elementor and Cityscape patterns. */
+:root {
+  --bpt-ink: #172b3a;
+  --bpt-muted: #657482;
+  --bpt-brand: #176b59;
+  --bpt-brand-dark: #105244;
+  --bpt-accent: #e9b45a;
+  --bpt-surface: #ffffff;
+  --bpt-soft: #f4f7f6;
+  --bpt-border: #e1e8e5;
+  --bpt-radius: 14px;
+  --bpt-shadow: 0 12px 32px rgba(23, 43, 58, .08);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  color: var(--bpt-ink);
+  background: #fff;
+  font-family: inherit;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; }
+a { transition: color .2s ease, background-color .2s ease, border-color .2s ease; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(23, 107, 89, .35);
+  outline-offset: 3px;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--bpt-ink);
+  line-height: 1.22;
+  letter-spacing: -.025em;
+}
+p { color: inherit; }
+::selection { color: #fff; background: var(--bpt-brand); }
+
+/* Primary actions */
+button, input[type="button"], input[type="submit"], input[type="reset"],
+.elementor-button, .wp-block-button__link, a.button, .button, .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.elementor-button:hover, .wp-block-button__link:hover, a.button:hover, .button:hover, .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(23, 43, 58, .12);
+}
+
+/* Header and navigation */
+.site-header, header.site-header, .main-header-bar, .elementor-location-header {
+  position: relative;
+  z-index: 20;
+}
+.main-navigation a, .navbar a, .elementor-nav-menu a, .site-header a {
+  text-decoration: none;
+}
+.main-navigation a:hover, .navbar a:hover, .elementor-nav-menu a:hover {
+  color: var(--bpt-brand);
+}
+
+/* Property cards and listing grids */
+.property-item, .property-card, .property-listing, .listing-item,
+.real-estate-item, .estate-item, .property-wrap, .elementor-post,
+.elementor-post__card, .wp-block-post, .type-property {
+  overflow: hidden;
+  border-radius: var(--bpt-radius);
+}
+.property-item, .property-card, .property-listing, .listing-item,
+.real-estate-item, .estate-item, .elementor-post__card {
+  background: var(--bpt-surface);
+  border: 1px solid var(--bpt-border);
+  box-shadow: 0 4px 18px rgba(23, 43, 58, .04);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.property-item:hover, .property-card:hover, .property-listing:hover, .listing-item:hover,
+.real-estate-item:hover, .estate-item:hover, .elementor-post__card:hover {
+  transform: translateY(-4px);
+  border-color: #c8d9d2;
+  box-shadow: var(--bpt-shadow);
+}
+.property-item img, .property-card img, .property-listing img, .listing-item img,
+.elementor-post__thumbnail img, .elementor-post__card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.property-item img, .property-card img, .property-listing img, .listing-item img {
+  transition: transform .35s ease;
+}
+.property-item:hover img, .property-card:hover img, .property-listing:hover img, .listing-item:hover img {
+  transform: scale(1.025);
+}
+.price, .property-price, .listing-price, .property__price {
+  color: var(--bpt-brand);
+  font-weight: 750;
+}
+.property-meta, .property-features, .listing-meta, .property__meta {
+  color: var(--bpt-muted);
+  font-size: .92rem;
+}
+
+/* Elementor sections and content rhythm */
+.elementor-section .elementor-heading-title { text-wrap: pretty; }
+.elementor-widget-text-editor p:last-child { margin-bottom: 0; }
+.elementor-widget-image img, .wp-block-image img {
+  border-radius: 10px;
+}
+.elementor-widget-icon-box .elementor-icon-box-title,
+.elementor-widget-image-box .elementor-image-box-title {
+  color: var(--bpt-ink);
+}
+.elementor-widget-icon-box, .elementor-widget-image-box {
+  overflow-wrap: anywhere;
+}
+
+/* Forms and search */
+input[type="text"], input[type="email"], input[type="tel"], input[type="url"],
+input[type="number"], input[type="search"], input[type="password"],
+select, textarea, .form-control {
+  max-width: 100%;
+  min-height: 46px;
+  padding: 10px 13px;
+  color: var(--bpt-ink);
+  background: #fff;
+  border: 1px solid #d5dfdb;
+  border-radius: 8px;
+  box-shadow: none;
+}
+textarea { min-height: 130px; }
+input:focus, select:focus, textarea:focus {
+  border-color: var(--bpt-brand);
+  box-shadow: 0 0 0 3px rgba(23, 107, 89, .1);
+}
+.search-form, .property-search, .advanced-search {
+  border-radius: var(--bpt-radius);
+}
+
+/* Editorial pages, articles and breadcrumbs */
+.entry-content, .page-content, .post-content {
+  overflow-wrap: anywhere;
+}
+.entry-content a:not(.button):not(.elementor-button),
+.page-content a:not(.button):not(.elementor-button) {
+  text-underline-offset: 3px;
+}
+.entry-meta, .post-meta, .breadcrumbs, .breadcrumb {
+  color: var(--bpt-muted);
+  font-size: .9rem;
+}
+blockquote, .wp-block-quote {
+  margin-inline: 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--bpt-brand);
+  background: var(--bpt-soft);
+  border-radius: 0 10px 10px 0;
+}
+
+/* Footer */
+.site-footer, footer.site-footer, .elementor-location-footer {
+  color: #eaf1ef;
+}
+.site-footer a, footer.site-footer a, .elementor-location-footer a {
+  text-decoration: none;
+}
+.site-footer a:hover, footer.site-footer a:hover, .elementor-location-footer a:hover {
+  color: var(--bpt-accent);
+}
+
+/* Responsive refinements */
+@media (max-width: 767px) {
+  h1, .elementor-widget-heading h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  h2, .elementor-widget-heading h2 { font-size: clamp(1.55rem, 6vw, 2rem); }
+  .property-item, .property-card, .property-listing, .listing-item,
+  .real-estate-item, .estate-item, .elementor-post__card { border-radius: 11px; }
+  .elementor-section .elementor-container { max-width: 100%; }
+  .elementor-widget-button .elementor-button { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
