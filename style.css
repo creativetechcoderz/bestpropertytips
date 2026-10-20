@@ -1,17 +1,23 @@
 /*
-Theme Name:   Cityscape Child
-Theme URL:    https://wowtheme7.com/cityscape-child/
-Description:  Real Estate WordPress Theme
-Author:       wowtheme7
-Author URL:   https://wowtheme7.com/
-Template:     cityscape
-Version:      1.0.2
-License:      GNU General Public License v2 or later
-License URL:  http://www.gnu.org/licenses/gpl-2.0.html
-Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
-Text Domain:  cityscapechildtheme
-*/
+Theme Name: Cityscape
+Theme URI: https://wowtheme7.com/wp/cityscape/
+Author: wowtheme7
+Author URI: https://themeforest.net/user/wowtheme7
+Description: Cityscape – Its unique features and functionalities make it the ideal solution for websites dedicated to Real Estate and other businesses related to Service. The theme is well suited for all types of Real Estate services: Business, listing, long range Real Estate service.
+Version: 1.0.3
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cityscape
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tested up to: 5.8
+Requires PHP: 7.1
 
-/*
-    Please Add your custom styles here
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Cityscape is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
